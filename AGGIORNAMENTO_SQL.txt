@@ -1,0 +1,10 @@
+Il vecchio SQL è già stato eseguito. Apri SQL Editor -> New query ed esegui SOLO questo aggiornamento:
+
+-- Verifica del codice regia senza avviare il film.
+create or replace function public.ficulle_verify_regia(p_secret text) returns boolean
+language plpgsql security definer set search_path=public as $$
+begin
+ return exists(select 1 from public.ficulle_private where id=1 and secret_hash=crypt(p_secret,secret_hash));
+end $$;
+revoke all on function public.ficulle_verify_regia(text) from public;
+grant execute on function public.ficulle_verify_regia(text) to anon,authenticated;

@@ -1,0 +1,18 @@
+IL CASO FICULLE — SITO REGIA + INVITATI
+
+STATO: CODICE PRONTO, NON ANCORA PUBBLICATO. Servono un nuovo progetto Supabase e un sito statico HTTPS.
+
+1) Crea un progetto Supabase SEPARATO da Borrachos League.
+2) In supabase.sql sostituisci CAMBIA-QUESTO-CODICE-LUNGO-E-CASUALE con un codice casuale segreto di almeno 20 caratteri, poi esegui il file nel SQL Editor Supabase. Non mettere il codice segreto in config.js o nel repository.
+3) Da Supabase > Project Settings > API copia Project URL e anon/publishable key in config.js. NON usare la service_role key.
+4) Metti il video definitivo in questa cartella con nome IL_CASO_FICULLE.mp4 (MP4 H.264 + AAC, ottimizzato per mobile). Il video NON è incluso in questo pacchetto.
+5) Pubblica tutti i file su GitHub Pages, Netlify o hosting HTTPS. Con GitHub Pages usa un NUOVO repository separato, non Borrachos League. Evita di mettere il codice segreto nel repo.
+6) Il link https://TUO-SITO/index.html va agli invitati via QR code. Il link https://TUO-SITO/regia.html va solo allo starter; il codice segreto glielo mandi separatamente.
+7) Prova con almeno tre telefoni diversi (Android e iPhone) prima del matrimonio. Ogni invitato deve premere SONO PRONTO. Se il browser blocca l'avvio sonoro automatico, compare TOCCA PER AVVIARE IL VIDEO. Non è garantita una sincronizzazione perfetta: dipende da rete e browser.
+8) La regia può avviare, mettere in pausa, riprendere e riavviare. L'indicatore degli invitati conta i dispositivi che hanno premuto SONO PRONTO e sono ancora attivi.
+
+IMPORTANTE: questa soluzione NON è una diretta streaming dal telefono. Tutti scaricano lo stesso video ospitato online e la regia sincronizza i comandi. Servono buona connessione Internet, hosting con banda sufficiente, e un MP4 abbastanza leggero. GitHub Pages può avere limiti di traffico/dimensione: per molti invitati è preferibile un hosting video/CDN.
+
+SICUREZZA: il codice regia è verificato lato database; il solo link regia non basta. La funzione di verifica non include rate-limiting avanzato: usa un segreto lungo e casuale, non un PIN a quattro cifre. L'accesso degli invitati è aperto a chi possiede il link.
+
+PUBBLICAZIONE: non usare nessuno dei BAT del progetto Borrachos League per questo sito separato. Se si pubblica tramite GitHub Pages, si caricano i file nel repository dedicato. 

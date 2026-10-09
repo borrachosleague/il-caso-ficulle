@@ -1,0 +1,3 @@
+const CFG=window.FICULLE_CONFIG;const configured=!!(CFG.supabaseUrl&&CFG.supabaseAnonKey);const root=(CFG.supabaseUrl||'').replace(/\/$/,'');
+async function rpc(fn,body={}){if(!configured)throw Error('Supabase non configurato: apri config.js.');let r=await fetch(root+'/rest/v1/rpc/'+fn,{method:'POST',headers:{'apikey':CFG.supabaseAnonKey,'Authorization':'Bearer '+CFG.supabaseAnonKey,'Content-Type':'application/json'},body:JSON.stringify(body),cache:'no-store'});if(!r.ok){let t=await r.text();throw Error('Errore '+r.status+': '+t.slice(0,240))}return await r.json()}
+const wait=ms=>new Promise(r=>setTimeout(r,ms));
