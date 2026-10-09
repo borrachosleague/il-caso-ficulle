@@ -2,6 +2,6 @@
 window.FICULLE_CONFIG = {
   supabaseUrl: "https://clfopdhqfsvzxavvpsyj.supabase.co",
   supabaseAnonKey: "sb_publishable_ZFcph-_Yyglwnanmo0aANw__FgWWu_Z",
-  videoFile: "il-caso-ficulle.mp4",
+  videoFile: "il_caso_ficulle.mp4",
   pollMs: 1200
 };
